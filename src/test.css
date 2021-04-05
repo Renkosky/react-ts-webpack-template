@@ -1,0 +1,27 @@
+.wrap {
+  height: 300px;
+  width: 200px;
+  overflow-x: hidden;
+}
+.a {
+  width: 200px;
+  height: 100px;
+  background: bisque;
+}
+
+.b {
+  width: 200px;
+  height: 100px;
+  background: goldenrod;
+}
+.c {
+  width: 200px;
+  height: 200px;
+  background: greenyellow;
+}
+
+.d {
+  width: 200px;
+  height: 200px;
+  background: royalblue;
+}

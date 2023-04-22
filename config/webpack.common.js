@@ -1,10 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const nodeExternals = require('webpack-node-externals');
 module.exports = {
-    entry: { app: './src/index.tsx' },
+    entry: { app: './src/client/app.js' },
     output: {
-        path: path.resolve(__dirname, '../dist'),
-        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, '../dist/static'),
+        filename: 'index.js',
         clean: true
     },
     module: {
@@ -67,11 +68,12 @@ module.exports = {
     resolve: {
         extensions: ['.ts', '.js', '.tsx', '.json']
     },
+    externals: [nodeExternals()],
     plugins: [
-        new HtmlWebpackPlugin({
-            title: 'hulu-hooks',
-            filename: 'index.html',
-            template: path.resolve(__dirname, '../public/index.html')
-        })
+        // new HtmlWebpackPlugin({
+        //     title: 'hulu-hooks',
+        //     filename: 'index.html',
+        //     template: path.resolve(__dirname, '../public/index.html')
+        // })
     ]
 };
